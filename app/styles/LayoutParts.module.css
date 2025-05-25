@@ -1,0 +1,85 @@
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .header h1 {
+    font-size: 22px;
+    margin: 0;
+    color: #333;
+  }
+  
+  .backLink {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px; /* Spacing between backlink and title */
+    display: block; /* Or adjust as needed */
+    cursor: pointer;
+  }
+  .backLink:hover {
+    color: #007bff;
+  }
+  
+  
+  .candidateInfo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .navButtons button {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .navButtons button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  
+  .tabs {
+    display: flex;
+    padding: 0 25px; /* Align with header padding */
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .tabButton {
+    padding: 12px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    border-bottom: 3px solid transparent; /* For active indicator */
+    margin-right: 10px; /* Space between tabs */
+    transition: color 0.2s, border-bottom-color 0.2s;
+  }
+  
+  .tabButton:hover {
+    color: #007bff;
+  }
+  
+  .activeTab {
+    color: #007bff; /* Or your primary color */
+    font-weight: bold;
+    border-bottom-color: #007bff; /* Or your primary color */
+  }

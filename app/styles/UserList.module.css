@@ -1,0 +1,74 @@
+
+.userListContainer {
+    width: 280px;
+    min-width: 280px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9; 
+    height: fit-content; 
+    max-height: calc(100vh - 200px); 
+    overflow-y: auto;
+  }
+  
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .recommendationNote {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .listItem:last-child {
+    border-bottom: none;
+  }
+  
+  .addButton {
+    background-color: #e0e0e0; /* Greyish background */
+    color: #333;
+    border: none;
+    border-radius: 50%; /* Make it circular */
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  .addButton:hover:not(:disabled) {
+    background-color: #4CAF50; /* Green on hover */
+    color: white;
+  }
+  
+  .addButton:disabled {
+    background-color: #4CAF50; /* Green when added */
+    color: white;
+    cursor: not-allowed;
+  }

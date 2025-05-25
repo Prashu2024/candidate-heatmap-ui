@@ -1,0 +1,144 @@
+
+.heatmapContainer {
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  position: relative;
+}
+
+.scrollableTable {
+  overflow-x: auto;
+  width: 100%;
+}
+.scrollableTableEmpty {
+  overflow: hidden;
+  width: 100%;
+}
+
+.heatmapTable, .heatmapTableEmpty {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+  table-layout: fixed;
+}
+
+.heatmapTable th, .heatmapTable td,
+.heatmapTableEmpty th, .heatmapTableEmpty td {
+  border: 1px solid #eee;
+  padding: 8px 10px;
+  text-align: left;
+  min-width: 80px;
+  white-space: nowrap;
+}
+
+.skillNameHeader, .skillNameHeaderEmpty {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 200px;
+  width: 200px;
+}
+.skillNameHeaderEmpty {
+   border-bottom: 1px solid #e0e0e0;
+}
+.candidateHeaderEmpty {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.candidateHeader {
+  background-color: #f9f9f9;
+  font-weight: normal;
+  text-align: center;
+  font-size: 11px;
+  min-width: 60px;
+  width: 60px;
+}
+
+.skillName, .skillNameEmpty {
+  background-color: #fff;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  font-weight: 500;
+   min-width: 200px;
+   width: 200px;
+}
+.skillNameEmpty {
+    color: #aaa;
+    background-color: #fdfdfd; /* Ensure empty skill name cell is also visually distinct if needed */
+}
+
+.heatmapCell, .heatmapCellEmpty {
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.heatmapCellEmpty {
+  background-color: #f7f7f7; /* Very light grey for empty grid cells */
+  opacity: 0.6;
+}
+
+/* New Color scores based on 0, 1, 2, 3 */
+.colorScoreDefault { background-color: #f9f9f9; } /* Default for missing or out-of-range scores (very pale) */
+.colorScore0 { background-color: #ecfff1; } /* Score 0 */
+.colorScore1 { background-color: #a6d96a; } /* Score 1 */
+.colorScore2 { background-color: #1a9641; } /* Score 2 */
+.colorScore3 { background-color: #003f0b; } /* Score 3 */
+
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.loadingState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensure it takes full height of its container */
+  min-height: 200px; /* Minimum height for visibility */
+}
+
+.emptyStateMessage {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  background-color: #e9f5e9;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #c8e6c9;
+  color: #2e7d32;
+}
+.heatmapLoadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2; /* Above table content but below main page overlay */
+  border-radius: 8px; /* Match container */
+}
+.heatmapLoadingOverlay p {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
