@@ -15,7 +15,7 @@ export default function UserList({ users, onAddCandidate, selectedCandidateIds, 
     <div className={styles.userListContainer}>
       <h3 className={styles.title}>Most recommended</h3>
       <p className={styles.recommendationNote}>
-        Recommendations are based on your skill requirements and candidate's performance.
+        Recommendations are based on your skill requirements and candidate&apos;s performance.
       </p>
       <ul className={styles.list}>
         {users.map(user => (
